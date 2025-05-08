@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Analisador</title>
+     <link rel="stylesheet" href="/static/style.css">
+ </head>
+ <body>
+     <div class="container">
+         <h1>Analisador de numeros</h1>
+         <form action="/validador" method="post">
+             <label for="num">Informe um numero:</label>
+             <input type="number" id="num" name="num" step="0.01" required>
+
+             <button type="submit">Analisar</button>
+         </form>
+
+         {% if num%}
+         <div class="resultado">
+             <h2>Resultado da analise</h2>
+             <p><strong>Seu numero é:</strong> {{ valor }} e {{condicao}}</p>
+         </div>
+         {% endif %}
+     </div>
+ </body>
+ </html>
